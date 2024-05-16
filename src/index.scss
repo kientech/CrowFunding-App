@@ -3,6 +3,52 @@
 @tailwind utilities;
 @layer base {
   body {
-    @apply font-body;
+    @apply font-primary text-base mx-auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+}
+
+input:focus + .error-input {
+  display: none;
+}
+
+.quill .ql-editor {
+  min-height: 300px;
+}
+
+.ql-toolbar.ql-snow {
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  border-color: #f1f1f3 !important;
+}
+
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-radius: 0 0 12px 12px;
+  border-color: #f1f1f3 !important;
+}
+
+.ql-editor {
+  font-family: Epilogue, sans-serif;
+  font-size: 14px;
+}
+
+.quill .ql-editor.ql-blank::before {
+  font-style: normal;
+  font-size: 14px;
+  color: #b2b3bd;
+  font-family: Epilogue, sans-serif;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.scroll-hidden {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+.scroll-hidden::-webkit-scrollbar {
+ display: none;
 }
